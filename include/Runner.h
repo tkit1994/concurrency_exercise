@@ -10,18 +10,18 @@
 
 class Runner {
 private:
-    int threads_;
-    int steps_;
-    std::shared_ptr<ICounter> counter_;
+  int threads_;
+  int steps_;
+  std::shared_ptr<ICounter> counter_;
+
 public:
-    Runner(int threads, std::shared_ptr<ICounter> counter, int steps);
+  Runner(int threads, std::shared_ptr<ICounter> counter, int steps);
 
-    ~Runner();
+  ~Runner();
 
-    void time_run();
+  void time_run();
 
-    void run();
+  void run();
 };
 
-
-#endif //CONCURRENCY_EXERCISE_RUNNER_H
+#endif // CONCURRENCY_EXERCISE_RUNNER_H

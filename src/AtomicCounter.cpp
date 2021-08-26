@@ -7,26 +7,16 @@
 
 AtomicCounter::AtomicCounter(int count) : count_(count) {}
 
-AtomicCounter::AtomicCounter() : AtomicCounter(0) {
+AtomicCounter::AtomicCounter() : AtomicCounter(0) {}
 
-}
+void AtomicCounter::add_one() { count_++; }
 
-void AtomicCounter::add_one() {
-    count_++;
-}
+void AtomicCounter::minus_one() { count_--; }
 
-void AtomicCounter::minus_one() {
-    count_--;
-}
-
-void AtomicCounter::reset() {
-    count_ = 0;
-}
+void AtomicCounter::reset() { count_ = 0; }
 
 void AtomicCounter::print() {
-    std::cout << "Counter:count_: " << count_ << std::endl;
+  std::cout << "Counter:count_: " << count_ << std::endl;
 }
 
-int AtomicCounter::get_count() {
-    return count_;
-}
+int AtomicCounter::get_count() { return count_; }

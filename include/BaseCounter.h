@@ -5,29 +5,28 @@
 #ifndef CONCURRENCY_EXERCISE_BASECOUNTER_H
 #define CONCURRENCY_EXERCISE_BASECOUNTER_H
 
-#include <ostream>
 #include "ICounter.h"
+#include <ostream>
 
 class BaseCounter : public ICounter {
 protected:
-    int count_;
-public:
-    BaseCounter(int count);
-
-    BaseCounter();
+  int count_;
 
 public:
-    void add_one() override;
+  BaseCounter(int count);
 
-    void minus_one() override;
+  BaseCounter();
 
-    int get_count() override;
+public:
+  void add_one() override;
 
-    void print() override;
+  void minus_one() override;
 
-    void reset() override;
+  int get_count() override;
 
+  void print() override;
+
+  void reset() override;
 };
 
-
-#endif //CONCURRENCY_EXERCISE_BASECOUNTER_H
+#endif // CONCURRENCY_EXERCISE_BASECOUNTER_H
