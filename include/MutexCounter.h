@@ -5,22 +5,22 @@
 #ifndef CONCURRENCY_EXERCISE_MUTEXCOUNTER_H
 #define CONCURRENCY_EXERCISE_MUTEXCOUNTER_H
 
-#include "ICounter.h"
 #include "BaseCounter.h"
+#include "ICounter.h"
 #include <mutex>
 
 class MutexCounter : public BaseCounter {
 private:
-    std::mutex m_;
+  std::mutex m_;
+
 public:
-    void add_one() override;
+  void add_one() override;
 
-    MutexCounter();
+  MutexCounter();
 
-    MutexCounter(int count);
+  MutexCounter(int count);
 
-    void minus_one() override;
+  void minus_one() override;
 };
 
-
-#endif //CONCURRENCY_EXERCISE_MUTEXCOUNTER_H
+#endif // CONCURRENCY_EXERCISE_MUTEXCOUNTER_H

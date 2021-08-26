@@ -10,23 +10,22 @@
 
 class AtomicCounter : public ICounter {
 private:
+  std::atomic_int count_;
 
-    std::atomic_int count_;
 public:
-    AtomicCounter();
+  AtomicCounter();
 
-    AtomicCounter(int count);
+  AtomicCounter(int count);
 
-    void add_one() override;
+  void add_one() override;
 
-    void minus_one() override;
+  void minus_one() override;
 
-    void reset() override;
+  void reset() override;
 
-    int get_count() override;
+  int get_count() override;
 
-    void print() override;
+  void print() override;
 };
 
-
-#endif //CONCURRENCY_EXERCISE_ATOMICCOUNTER_H
+#endif // CONCURRENCY_EXERCISE_ATOMICCOUNTER_H

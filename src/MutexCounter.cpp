@@ -5,13 +5,13 @@
 #include "MutexCounter.h"
 
 void MutexCounter::add_one() {
-    std::lock_guard<std::mutex> lck(m_);
-    BaseCounter::add_one();
+  std::lock_guard<std::mutex> lck(m_);
+  BaseCounter::add_one();
 }
 
 void MutexCounter::minus_one() {
-    std::lock_guard<std::mutex> lck(m_);
-    BaseCounter::minus_one();
+  std::lock_guard<std::mutex> lck(m_);
+  BaseCounter::minus_one();
 }
 
 MutexCounter::MutexCounter() : BaseCounter() {}
